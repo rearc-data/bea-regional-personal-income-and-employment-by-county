@@ -55,9 +55,8 @@ def source_dataset():
     s3_uploads = []
     asset_list = []
 
-    for r, d, f in os.walk(os.path.join(data_dir, unzipped_name)):
+    for r, d, f in os.walk(data_dir):
         for filename in f:
-
             obj_name = os.path.join(r, filename).split('/', 3).pop().replace(' ', '_').lower()
             file_location = os.path.join(r, filename)
             new_s3_key = data_set_name + '/dataset/' + obj_name
@@ -81,3 +80,4 @@ def source_dataset():
     # asset_list is returned to be used in lamdba_handler function
     # if it is empty, lambda_handler will not republish
     return asset_list
+
