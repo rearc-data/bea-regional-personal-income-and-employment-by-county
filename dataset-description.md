@@ -1,0 +1,2 @@
+The U.S. Bureau of Economic Analysis (BEA) - Employment by County, Metro and Other Areas
+A count of full-time and part-time jobs in U.S. counties and metropolitan areas, with industry detail. Nonmetropolitan areas and rural counties are also included. These statistics cover wage and salary jobs and self-employment.

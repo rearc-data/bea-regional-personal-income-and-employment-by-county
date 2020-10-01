@@ -29,6 +29,12 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
+  echo "S3Bucket: $S3_BUCKET"
+  echo "DataSetName: $DATASET_NAME"
+  echo "DataSetArn: $DATASET_ARN"
+  echo "Region: $REGION"
+  echo "S3Bucket: $S3_BUCKET"
+
 while [[ ${#DATASET_NAME} -gt 53 ]]; do
     echo "dataset-name must be under 53 characters in length, enter a shorter name:"
     read -p "New dataset-name: " DATASET_NAME
@@ -52,7 +58,7 @@ done
 
 #upload pre-preprocessing.zip to s3
 echo "uploading pre-preprocessing.zip to s3"
-aws s3 cp pre-processing/pre-processing-code/pre-processing-code.zip s3://$S3_BUCKET/$DATASET_NAME/automation/pre-processing-code.zip --region $REGION$PROFILE
+aws s3 cp pre-processing/pre-processing-code/pre-processing-code.zip s3://$S3_BUCKET/$DATASET_NAME/automation/pre-processing-code.zip --region "$REGION$PROFILE"
 
 #creating dataset on ADX
 echo "creating dataset on ADX"
@@ -96,7 +102,7 @@ update () {
   aws cloudformation update-stack --stack-name $CFN_STACK_NAME --use-previous-template --parameters ParameterKey=S3Bucket,ParameterValue=$S3_BUCKET ParameterKey=DataSetName,ParameterValue=$DATASET_NAME ParameterKey=DataSetArn,ParameterValue=$DATASET_ARN ParameterKey=ProductId,ParameterValue=$NEW_PRODUCT_ID ParameterKey=Region,ParameterValue=$REGION --region $REGION --capabilities "CAPABILITY_AUTO_EXPAND" "CAPABILITY_NAMED_IAM" "CAPABILITY_IAM"$PROFILE
 
   echo "waiting for cloudformation stack update to complete"
-  aws cloudformation wait stack-update-complete --stack-name $CFN_STACK_NAME --region $REGION$PROFILE
+  aws cloudformation wait stack-update-complete --stack-name $CFN_STACK_NAME --region "$REGION$PROFILE"
 
   if [[ $? -ne 0 ]]
   then
@@ -108,10 +114,10 @@ update () {
 
 delete () {
   echo "Destroying the CloudFormation stack"
-  aws cloudformation delete-stack --stack-name $CFN_STACK_NAME --region $REGION$PROFILE
+  aws cloudformation delete-stack --stack-name $CFN_STACK_NAME --region "$REGION$PROFILE"
 
   #check status of cloudformation stack delete action
-  aws cloudformation wait stack-delete-complete --stack-name $CFN_STACK_NAME --region $REGION$PROFILE
+  aws cloudformation wait stack-delete-complete --stack-name $CFN_STACK_NAME --region "$REGION$PROFILE"
   if [[ $? -eq 0 ]]
   then
     # Cloudformation stack deleted

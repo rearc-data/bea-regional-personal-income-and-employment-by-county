@@ -2,25 +2,30 @@
     <img src="./rearc_logo_rgb.png" alt="Rearc Logo" title="Rearc Logo" height="52" />
 </a>
 
-# 
+### Employment by County, Metro, and Other Areas | The U.S. Bureau of Economic Analysis (BEA)
+### Table CAINC4 - Personal Income and Employment by Major Component and County
 
-You can subscribe to the AWS Data Exchange product utilizing the automation featured in this repository by visiting [](). 
+The source code outlining how this product gathers, transforms, revises and publishes its datasets is available at [BEA - Employment by County, Metro, and Other Areas](https://www.bea.gov/data/employment/employment-county-metro-and-other-areas).
 
 ## Main Overview
+The U.S. Bureau of Economic Analysis (BEA) produces data about the nation's economy, including U.S. gross domestic product, better known as GDP, as well as state and local numbers, foreign trade and investment stats and industry data.
 
 #### Data Source
+The dataset files included with this product are provided in CSV format. README files are also included to offer context on data fields used throughout the dataset files. The specific files included with each revisions may vary.
+
+This product uses the Bureau of Economic Analysis (BEA) Data but is not endorsed or certified by BEA. Please refer to the [BEA Terms Of Service](https://apps.bea.gov/API/_pdf/bea_api_tos.pdf) for more information.
 
 ## More Information
-- Source:      
-- 
-- 
-- Frequency:
-- Formats:
+- Source: [The U.S. Bureau of Economic Analysis](https://www.bea.gov/)
+- [BEA - Employment by County, Metro, and Other Areas](https://www.bea.gov/data/employment/employment-county-metro-and-other-areas)
+- [BEA Terms Of Service](https://apps.bea.gov/API/_pdf/bea_api_tos.pdf)
+- Frequency: Annual
+- Format: CSV
 
 ## Contact Details
-- If you find any issues with or have enhancement ideas for this product, open up a GitHub [issue]() and we will gladly take a look at it. Better yet, submit a pull request. Any contributions you make are greatly appreciated :heart:.
-- If you are looking for specific open datasets currently not available on ADX, please submit a request on our project board [here]().
-- If you have questions about the source data, please contact .
+- If you find any issues with or have enhancement ideas for this product, open up a GitHub [issue](https://github.com/rearc-data/bea-regional-employment-by-county-metro/issues) and we will gladly take a look at it. Better yet, submit a pull request. Any contributions you make are greatly appreciated :heart:.
+- If you are looking for specific open datasets currently not available on ADX, please submit a request on our project board [here](https://github.com/orgs/rearc-data/projects/1).
+- If you have questions about the source data, please contact [The U.S. Bureau of Economic Analysis](https://www.bea.gov/help/contact-us).
 - If you have any other questions or feedback, send us an email at data@rearc.io.
 
 ## About Rearc
