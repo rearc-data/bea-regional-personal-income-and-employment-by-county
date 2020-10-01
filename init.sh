@@ -29,12 +29,6 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-  echo "S3Bucket: $S3_BUCKET"
-  echo "DataSetName: $DATASET_NAME"
-  echo "DataSetArn: $DATASET_ARN"
-  echo "Region: $REGION"
-  echo "S3Bucket: $S3_BUCKET"
-
 while [[ ${#DATASET_NAME} -gt 53 ]]; do
     echo "dataset-name must be under 53 characters in length, enter a shorter name:"
     read -p "New dataset-name: " DATASET_NAME
