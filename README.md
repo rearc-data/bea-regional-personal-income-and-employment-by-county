@@ -2,10 +2,9 @@
     <img src="./rearc_logo_rgb.png" alt="Rearc Logo" title="Rearc Logo" height="52" />
 </a>
 
-### Employment by County, Metro, and Other Areas | The U.S. Bureau of Economic Analysis (BEA)
-### Table CAINC4 - Personal Income and Employment by Major Component and County
+### Employment by County, Metro, and Other Areas | Personal Income and Employment by Major Component and County (Table CAINC4) | The U.S. Bureau of Economic Analysis (BEA)
 
-The source code outlining how this product gathers, transforms, revises and publishes its datasets is available at [BEA - Employment by County, Metro, and Other Areas](https://www.bea.gov/data/employment/employment-county-metro-and-other-areas).
+You can subscribe to the AWS Data Exchange product utilizing the automation featured in this repository by visiting [https://aws.amazon.com/marketplace/pp/prodview-5r625u6lyujme](https://aws.amazon.com/marketplace/pp/prodview-5r625u6lyujme).
 
 ## Main Overview
 The U.S. Bureau of Economic Analysis (BEA) produces data about the nation's economy, including U.S. gross domestic product, better known as GDP, as well as state and local numbers, foreign trade and investment stats and industry data.
