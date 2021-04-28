@@ -9,9 +9,9 @@ from s3_md5_compare import md5_compare
 
 def source_dataset():
     bea_dataset_name = os.getenv('BEA_DATASET_NAME', 'regional')
-    table_name = os.getenv('BEA_TABLE_NAME', 'CAINC4')
+    table_name = os.getenv('BEA_TABLE_NAME', 'CAINC1')
     source_dataset_url = "https://apps.bea.gov/{}/zip/{}.zip".format(bea_dataset_name, table_name)
-    
+
     response = None
     retries = 5
     for attempt in range(retries):
@@ -27,10 +27,10 @@ def source_dataset():
             time.sleep(0.2 * attempt)
         else:
             break
-            
+
     if response == None:
         raise Exception('There was an issue downloading the dataset')
-            
+
     data_set_name = os.environ['DATA_SET_NAME']
 
     data_dir = '/tmp'
@@ -80,4 +80,3 @@ def source_dataset():
     # asset_list is returned to be used in lamdba_handler function
     # if it is empty, lambda_handler will not republish
     return asset_list
-
