@@ -2,7 +2,7 @@
     <img src="./rearc_logo_rgb.png" alt="Rearc Logo" title="Rearc Logo" height="52" />
 </a>
 
-### Employment by County, Metro, and Other Areas | Personal Income and Employment by Major Component and County (Table CAINC4) | The U.S. Bureau of Economic Analysis (BEA)
+### Personal Income Summary: Personal Income, Population, Per Capita Personal Income (Table CAINC1) | The U.S. Bureau of Economic Analysis (BEA)
 
 You can subscribe to the AWS Data Exchange product utilizing the automation featured in this repository by visiting [https://aws.amazon.com/marketplace/pp/prodview-5r625u6lyujme](https://aws.amazon.com/marketplace/pp/prodview-5r625u6lyujme).
 
